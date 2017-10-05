@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Phonebooks</h1>
+
+<table class= 'stripe', id = 'phonebooks'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @phonebooks.each do |phonebook| %>
+      <tr>
+        <td><%= phonebook.name %></td>
+        <td><%= phonebook.phone %></td>
+        <td><%= phonebook.address %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Phonebook', new_phonebook_path %>
